@@ -2,6 +2,7 @@ const app = require('express')()
 const { WebhookClient } = require('discord.js')
 const Hook = new WebhookClient(process.env.ID, process.env.TOKEN)
 const https = require('https')
+launch()
 
 app.post('/', (req,res) => {
   const auth = req.body.auth
